@@ -32,6 +32,16 @@ public class TextColorTest {
   }
 }
 ```
+It is also possible to generate a TrueColor ANSI escape code with this library, just do the following:
+```java
+import com.libs.textcolor.main.TextColor;
+
+public class TextColorTest {
+  public static final void main(String[] args) {
+    System.out.println(TextColor.ANSI_FG_VALUE(132, 65, 42) + "Try combining different amounts of red, green, and blue!" + TextColor.ANSI_ALL_RESET);
+  }
+}
+```
 
 ## Notes
 IMPORTANT: Not all ANSI color codes are supported by every terminal! Most codes here are not supported by the Windows Command Prompt. If you're looking for an ANSI library that supports Windows, I recommend checking out the [Jansi](https://github.com/fusesource/jansi) library.
